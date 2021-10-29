@@ -43,9 +43,11 @@ if ($Documents.Count -gt 0) {
    #     StatusCode = [HttpStatusCode]::OK
    #     Body = "Processed"
    # }) -Clobber
+   
 } else {
     Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
         StatusCode = [HttpStatusCode]::ACCEPTED
         Body = "No payload"
     })
+    $res;
 }
