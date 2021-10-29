@@ -1,0 +1,14 @@
+{
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "Documents",
+      "direction": "in",
+      "leaseCollectionName": "leases",
+      "connectionStringSetting": "AzureWebJobsStorage",
+      "databaseName": "ac2001",
+      "collectionName": "weights",
+      "createLeaseCollectionIfNotExists": true
+    }
+  ]
+}
