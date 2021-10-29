@@ -4,8 +4,8 @@ using namespace System.Net
 param($Request, $TriggerMetadata)
 
 # HTML vars
-$head = ""
-$scripts = ""
+#$head = ""
+#$scripts = ""
 $body = ""
 
 # Delimiter char
