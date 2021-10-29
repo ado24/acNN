@@ -1,14 +1,28 @@
 {
   "bindings": [
     {
-      "type": "cosmosDBTrigger",
       "name": "Documents",
-      "direction": "in",
-      "leaseCollectionName": "leases",
-      "connectionStringSetting": "AzureWebJobsStorage",
+      "connectionStringSetting": "usersTrigger_ConnectionString",
       "databaseName": "ac2001",
       "collectionName": "weights",
-      "createLeaseCollectionIfNotExists": true
+      "leaseCollectionName": "leases",
+      "createLeaseCollectionIfNotExists": true,
+      "direction": "in",
+      "type": "cosmosDBTrigger"
+    },
+    {
+      "name": "weightsTable",
+      "tableName": "weights",
+      "connection": "cs210032000ea67c0ac_STORAGE",
+      "direction": "out",
+      "type": "table"
+    },
+    {
+      "name": "weightsBlob",
+      "direction": "out",
+      "type": "blob",
+      "path": "weights-blob/{rand-guid}",
+      "connection": "cs210032000ea67c0ac_STORAGE"
     }
   ]
 }
