@@ -3,7 +3,7 @@
     {
       "name": "Documents",
       "connectionStringSetting": "usersTrigger_ConnectionString",
-      "databaseName": "ac2001",
+      "databaseName": "acNN",
       "collectionName": "weights",
       "leaseCollectionName": "leases",
       "createLeaseCollectionIfNotExists": true,
@@ -23,6 +23,14 @@
       "type": "blob",
       "path": "weights-blob/{rand-guid}",
       "connection": "cs210032000ea67c0ac_STORAGE"
+    },
+    {
+      "name": "Documents",
+      "databaseName": "acNN",
+      "collectionName": "weights",
+      "connectionStringSetting": "usersTrigger_ConnectionString",
+      "direction": "in",
+      "type": "cosmosDB"
     }
   ]
 }
