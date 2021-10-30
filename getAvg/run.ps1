@@ -12,7 +12,7 @@ $body = ""
 $delimit = "|"
 
 # Write to the Azure Functions log stream.
-Write-Host "'Average D3' function processed a request."
+Write-Host "'Average' function processed a request."
 
 # Interact with query parameters or the body of the request, based on method type
 $isQueryVars = $Request.Method -eq "GET"
@@ -58,7 +58,7 @@ $outputCSV = $false #$incomingCollection.outputCSV
 $body = "" #"<html><head>$head</head><body><div>"
 
 if ($consoleOutput) {
-    $body += "Hello, '$name', ID: $id . Your average D3 levels are: $avg IU over the last $numDays days"
+    $body += "Hello, '$name', ID: $id . Your average levels are: $avg units over the last $numDays days"
 } else {
     #$body +="'$name',"
     
