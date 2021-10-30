@@ -29,6 +29,7 @@ if ($Documents.Count -gt 0) {
 
         # Associate values to output bindings by calling 'Push-OutputBinding'.
         Push-OutputBinding -Name weightsTable -Value ($body) # | ConvertTo-Json)
+        Push-OutputBinding -Name weightsBlob -Value ($body) # | ConvertTo-Json)
 
 
         $res = [HttpResponseContext]@{
