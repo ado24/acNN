@@ -9,3 +9,11 @@ local.settings.json
 __blobstorage__
 __queuestorage__
 __azurite_db*__.json
+
+#VS artifacts
+.vs/*
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/acNN/project-colors.json
+.vs/acNN/v17/.suo
